@@ -4,8 +4,8 @@ let computerScore = 0;
 const buttonContainer = document.querySelector(".buttonContainer");
 const humanScoreParagraph = document.querySelector(".humanScoreParagraph");
 const computerScoreParagraph = document.querySelector(".computerScoreParagraph");
-const humanChoiceParagraph = document.querySelector(".humanStage p");
-const computerChoiceParagraph = document.querySelector(".computerStage p");
+const humanChoiceImage = document.querySelector(".humanStage img");
+const computerChoiceImage = document.querySelector(".computerStage img");
 
 buttonContainer.addEventListener("click", (e) => {
     let choice = e.target.textContent
@@ -81,9 +81,9 @@ function playRound(humanChoice) {
     }
 
     humanScoreParagraph.textContent = `Human score: ${humanScore}`;
-    humanChoiceParagraph.textContent = humanChoice;
+    humanChoiceImage.src = "images/" + humanChoice + ".jpg";
     computerScoreParagraph.textContent = `Computer score: ${computerScore}`;
-    computerChoiceParagraph.textContent = computerChoice;
+    computerChoiceImage.src = "images/" + computerChoice + ".jpg";
 }
 
 function playGame() {
